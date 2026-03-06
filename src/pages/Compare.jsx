@@ -42,13 +42,13 @@ const products = [
 export default function Compare() {
     return (
         <div className="max-w-7xl mx-auto py-48 px-5 text-center">
-            <motion.h2
+            <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-5xl font-extrabold mb-24 text-white"
             >
                 Which AirPods are right for you?
-            </motion.h2>
+            </motion.h1>
 
             <div className="grid md:grid-cols-3 gap-10">
                 {products.map((product, idx) => (

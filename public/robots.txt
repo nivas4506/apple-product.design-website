@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://airpods-max-react.vercel.app/sitemap.xml

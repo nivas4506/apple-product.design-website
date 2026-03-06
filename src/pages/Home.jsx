@@ -53,9 +53,9 @@ const ProductSection = ({ title, subtitle, image, color }) => {
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 className="z-10 mb-16"
             >
-                <h1 className={`text-7xl md:text-9xl font-black tracking-tighter mb-6 ${TEXT_GRADIENT_CLASS}`}>
+                <h2 className={`text-7xl md:text-9xl font-black tracking-tighter mb-6 ${TEXT_GRADIENT_CLASS}`}>
                     {title}
-                </h1>
+                </h2>
                 <p className="text-xl md:text-3xl font-medium text-apple-slate/80 max-w-3xl mx-auto leading-tight">
                     {subtitle}
                 </p>
@@ -69,7 +69,7 @@ const ProductSection = ({ title, subtitle, image, color }) => {
                 >
                     <motion.img
                         src={image}
-                        alt={title}
+                        alt={`${title} - Premium Over-Ear Headphones`}
                         className="w-full max-w-[650px] mx-auto drop-shadow-[0_60px_120px_rgba(0,113,227,0.3)] [transform:translateZ(150px)] pointer-events-none filter brightness-110"
                         whileHover={{ scale: 1.05 }}
                     />
@@ -180,9 +180,9 @@ export default function Home() {
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h2 className="text-6xl md:text-8xl font-black tracking-tight text-white mb-4">
+                        <h1 className="text-6xl md:text-8xl font-black tracking-tight text-white mb-4">
                             Symphonic<br /><span className="text-apple-slate/60">Sound. Redefined.</span>
-                        </h2>
+                        </h1>
                     </motion.div>
                     <motion.div
                         className="flex gap-8 text-apple-blue font-bold text-lg"

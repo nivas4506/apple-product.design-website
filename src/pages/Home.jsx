@@ -8,6 +8,7 @@ const TEXT_GRADIENT_CLASS = "bg-clip-text text-transparent bg-gradient-to-r from
 const productImages = {
     max: "/src/assets/airpods_purple.png",
     pro: "/src/assets/airpods_pro.png",
+    design: "/src/assets/airpods_max_design.png",
 };
 
 const ScrollProgress = () => {
@@ -98,6 +99,70 @@ const FeatureCard = ({ icon: Icon, title, desc, delay, onClick }) => (
         </div>
     </motion.div>
 );
+
+const DesignSection = () => {
+    return (
+        <section className="py-40 px-[8%] relative overflow-hidden bg-black">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+                <motion.div
+                    className="flex-1"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <span className="text-apple-blue font-black tracking-widest text-sm uppercase mb-6 block">Craftsmanship</span>
+                    <h2 className="text-5xl md:text-7xl font-black mb-10 tracking-tight leading-none text-white">
+                        Design is in<br />
+                        <span className="text-apple-slate/60">the details.</span>
+                    </h2>
+                    <p className="text-apple-slate text-xl leading-relaxed mb-12 max-w-xl">
+                        A radically original composition. The over-ear headphone has been completely reimagined. From cushion to canopy, AirPods Max are designed for an uncompromising fit that creates the optimal acoustic seal for many different head shapes — fully immersing you in every sound.
+                    </p>
+
+                    <div className="grid gap-8">
+                        {[
+                            { title: "Knit Mesh Canopy", desc: "Reduces pressure for an effortless fit." },
+                            { title: "Stainless Steel Frame", desc: "Wrapped with a soft-to-the-touch material." },
+                            { title: "Telescoping Arms", desc: "Smoothly extend and stay where you set them." }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 * i }}
+                                className="flex items-start gap-6 group"
+                            >
+                                <div className="w-1 h-12 bg-apple-blue/20 group-hover:bg-apple-blue transition-colors" />
+                                <div>
+                                    <h4 className="font-black text-white text-lg mb-1">{item.title}</h4>
+                                    <p className="text-apple-slate">{item.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    className="flex-1 relative"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <div className="relative rounded-[60px] overflow-hidden border border-white/10 shadow-2xl">
+                        <img src={productImages.design} alt="AirPods Max Design Detail" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    </div>
+                    {/* Floating Accent */}
+                    <motion.div
+                        animate={{ y: [0, -20, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute -top-10 -right-10 w-40 h-40 bg-apple-blue/20 blur-[80px] rounded-full"
+                    />
+                </motion.div>
+            </div>
+        </section>
+    );
+};
 
 export default function Home() {
     const [selectedFeature, setSelectedFeature] = useState(null);
@@ -199,6 +264,8 @@ export default function Home() {
                 image={productImages.max}
                 color="apple-slate"
             />
+
+            <DesignSection />
 
             {/* Performance Detail */}
             <section className="py-60 px-[8%] bg-gradient-to-b from-black to-apple-gray/20">

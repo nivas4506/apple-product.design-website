@@ -16,20 +16,27 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full h-[60px] z-50 flex items-center justify-center bg-black/80 backdrop-blur-2xl backdrop-saturate-[180%] border-b border-white/10 px-[10%]">
-            <ul className="flex gap-10 list-none text-xs">
+        <nav className="fixed top-0 left-0 w-full h-[60px] z-50 flex items-center justify-between bg-black/80 backdrop-blur-2xl backdrop-saturate-[180%] border-b border-white/10 px-[8%]">
+            <Link to="/" className="text-sm font-black tracking-tighter text-white hover:opacity-80 transition-opacity">
+                PRODUCT STORE
+            </Link>
+
+            <ul className="flex gap-10 list-none text-[10px] font-medium">
                 {navItems.map(item => (
                     <li key={item.path}>
                         <Link
                             to={item.path}
-                            className={`transition-colors ${location.pathname === item.path ? 'text-white' : 'text-apple-slate hover:text-white'}`}
+                            className={`transition-colors uppercase tracking-widest ${location.pathname === item.path ? 'text-white' : 'text-apple-slate hover:text-white'}`}
                         >
                             {item.label}
                         </Link>
                     </li>
                 ))}
-                <li><button className="font-bold text-white hover:opacity-80 transition-opacity">Buy</button></li>
             </ul>
+
+            <button className="bg-white text-black text-[10px] font-black px-6 py-2 rounded-full hover:bg-apple-silver transition-all active:scale-95">
+                BUY
+            </button>
         </nav>
     );
 };
@@ -68,7 +75,7 @@ export default function App() {
                 </Routes>
 
                 <footer className="py-32 text-center border-t border-white/5 text-apple-slate text-[10px] tracking-[0.2em] uppercase">
-                    <p>&copy; 2026 Apple Inc. All rights reserved.</p>
+                    <p>&copy; 2026 Product Store. All rights reserved.</p>
                 </footer>
             </div>
         </Router>

@@ -1,0 +1,269 @@
+:root {
+    --bg-color: #010101;
+    --primary: #ffffff;
+    --secondary: #0071e3;
+    /* Apple Blue */
+    --accent: #ffb6c1;
+    /* Soft pink for high-end feel */
+    --slate: #8e8e93;
+    --text-main: #f5f5f7;
+    --text-muted: #a1a1aa;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition-fast: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Sonic Flow Background --- */
+.sonic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
+}
+
+.wave {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 40%;
+    background: linear-gradient(45deg, rgba(0, 113, 227, 0.15), rgba(142, 142, 147, 0.05));
+    filter: blur(100px);
+    animation: flow 25s infinite linear;
+}
+
+.wave-1 {
+    top: -200px;
+    left: -200px;
+    opacity: 0.4;
+    animation-duration: 30s;
+}
+
+.wave-2 {
+    bottom: -200px;
+    right: -200px;
+    opacity: 0.3;
+    background: linear-gradient(45deg, rgba(245, 87, 108, 0.1), rgba(0, 113, 227, 0.15));
+}
+
+@keyframes flow {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* --- Premium Nav --- */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 5%;
+}
+
+.hero-header {
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--slate);
+    font-weight: 400;
+}
+
+/* --- 3D Product Showcase --- */
+.product-showcase {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    perspective: 2000px;
+    margin-top: 20px;
+}
+
+.product-image-container {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-fast);
+}
+
+.main-product-img {
+    width: 100%;
+    max-width: 600px;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.8));
+    transform: translateZ(50px);
+    transition: transform 0.1s ease-out;
+}
+
+.liquid-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Feature Cards --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.glass-feature {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+    transition: var(--transition-fast);
+}
+
+.glass-feature:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.glass-feature h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.glass-feature p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- CTA Button --- */
+.btn-apple {
+    display: inline-block;
+    background: var(--primary);
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 40px;
+    transition: var(--transition-fast);
+}
+
+.btn-apple:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Animations */
+.fade-up {
+    animation: fadeUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

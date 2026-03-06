@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirPods Max | Absolute Sound | Redesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#00000',
+                            gray: '#1d1d1f',
+                            silver: '#f5f5f7',
+                            slate: '#8e8e93'
+                        }
+                    },
+                    animation: {
+                        'liquid-slow': 'liquid 25s infinite linear',
+                        'fade-up': 'fadeUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+                    },
+                    keyframes: {
+                        liquid: {
+                            '0%': { transform: 'rotate(0deg) scale(1)' },
+                            '50%': { transform: 'rotate(180deg) scale(1.15)' },
+                            '100%': { transform: 'rotate(360deg) scale(1)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-black text-apple-silver font-['Outfit'] antialiased overflow-x-hidden">
+
+    <!-- Sonic Background with Morphing Liquid Blob -->
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-black">
+        <!-- SVG Morphing Blob -->
+        <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] opacity-20 blur-3xl mix-blend-screen"
+            viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#0071e3"
+                d="M44.7,-76.4C58.1,-69.2,70.3,-59,78.4,-46.1C86.5,-33.2,90.5,-17.6,89.5,-2.4C88.5,12.8,82.5,27.6,73.5,41C64.5,54.4,52.5,66.4,38.3,73.1C24.1,79.8,7.7,81.2,-8.1,79.8C-23.9,78.4,-39.1,74.2,-52.3,66.2C-65.5,58.2,-76.7,46.4,-82.1,32.7C-87.5,19,-87.1,3.4,-84.6,-11.5C-82.1,-26.4,-77.5,-40.6,-68.2,-51.9C-58.9,-63.2,-44.9,-71.6,-31.1,-78.2C-17.3,-84.8,-3.7,-89.6,10.5,-89.4C24.7,-89.2,33.3,-83.6,44.7,-76.4Z"
+                transform="translate(100 100)">
+                <animate attributeName="d" dur="20s" repeatCount="indefinite"
+                    values="M44.7,-76.4C58.1,-69.2,70.3,-59,78.4,-46.1C86.5,-33.2,90.5,-17.6,89.5,-2.4C88.5,12.8,82.5,27.6,73.5,41C64.5,54.4,52.5,66.4,38.3,73.1C24.1,79.8,7.7,81.2,-8.1,79.8C-23.9,78.4,-39.1,74.2,-52.3,66.2C-65.5,58.2,-76.7,46.4,-82.1,32.7C-87.5,19,-87.1,3.4,-84.6,-11.5C-82.1,-26.4,-77.5,-40.6,-68.2,-51.9C-58.9,-63.2,-44.9,-71.6,-31.1,-78.2C-17.3,-84.8,-3.7,-89.6,10.5,-89.4C24.7,-89.2,33.3,-83.6,44.7,-76.4Z;
+                            M41.5,-73.4C54.1,-67.2,65,-57.4,73.1,-45.3C81.2,-33.2,86.5,-18.8,87.4,-4.1C88.3,10.6,84.8,25.6,75.9,38C67,50.3,52.7,60.1,37.3,67.6C21.9,75.1,5.4,80.4,-11.9,79.2C-29.2,78,-47.3,70.3,-60.5,57.4C-73.7,44.5,-82,26.4,-84.4,8C-86.8,-10.4,-83.3,-29.1,-73.4,-44.2C-63.5,-59.3,-47.2,-70.8,-31.5,-76.5C-15.8,-82.2,-0.7,-82.1,13.7,-80.4C28.1,-78.7,31.9,-79.6,41.5,-73.4Z;
+                            M44.7,-76.4C58.1,-69.2,70.3,-59,78.4,-46.1C86.5,-33.2,90.5,-17.6,89.5,-2.4C88.5,12.8,82.5,27.6,73.5,41C64.5,54.4,52.5,66.4,38.3,73.1C24.1,79.8,7.7,81.2,-8.1,79.8C-23.9,78.4,-39.1,74.2,-52.3,66.2C-65.5,58.2,-76.7,46.4,-82.1,32.7C-87.5,19,-87.1,3.4,-84.6,-11.5C-82.1,-26.4,-77.5,-40.6,-68.2,-51.9C-58.9,-63.2,-44.9,-71.6,-31.1,-78.2C-17.3,-84.8,-3.7,-89.6,10.5,-89.4C24.7,-89.2,33.3,-83.6,44.7,-76.4Z" />
+            </path>
+        </svg>
+        <div
+            class="absolute -top-[200px] -left-[200px] w-[800px] h-[800px] rounded-[40%] bg-gradient-to-br from-apple-blue/20 to-transparent blur-[100px] animate-liquid-slow opacity-40">
+        </div>
+        <div
+            class="absolute -bottom-[200px] -right-[200px] w-[800px] h-[800px] rounded-[40%] bg-gradient-to-br from-purple-500/10 to-apple-blue/10 blur-[100px] animate-liquid-slow delay-700 opacity-30">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 w-full h-[60px] z-50 flex items-center justify-center px-[10%] bg-black/80 backdrop-blur-2xl backdrop-saturate-[180%] border-b border-white/10">
+        <ul class="flex gap-10 list-none">
+            <li><a href="index.html"
+                    class="text-xs font-normal text-apple-slate hover:text-white transition-colors">Overview</a></li>
+            <li><a href="tech-specs.html"
+                    class="text-xs font-normal text-apple-slate hover:text-white transition-colors">Tech Specs</a></li>
+            <li><a href="compare.html"
+                    class="text-xs font-normal text-apple-slate hover:text-white transition-colors">Compare</a></li>
+            <li><a href="#" class="text-xs font-bold text-white transition-opacity hover:opacity-80">Buy</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Section 1: AirPods Max -->
+        <section
+            class="min-h-screen flex flex-col items-center justify-center text-center px-5 pt-16 relative overflow-hidden">
+            <div class="mb-10 animate-fade-up z-10">
+                <h1
+                    class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-apple-slate to-white/50">
+                    AirPods Max</h1>
+                <p class="text-xl md:text-2xl text-apple-slate font-normal max-w-2xl mx-auto">Symphonic boom.
+                    High‑fidelity audio with a radically original composition.</p>
+            </div>
+
+            <div class="relative w-full max-w-3xl [perspective:2000px] my-5 product-container">
+                <div
+                    class="relative w-full [transform-style:preserve-3d] transition-transform duration-300 tilt-wrapper">
+                    <img src="assets/airpods_purple.png" alt="AirPods Max"
+                        class="w-full max-w-[500px] mx-auto drop-shadow-[0_50px_100px_rgba(0,0,0,0.8)] [transform:translateZ(100px)] pointer-events-none main-img">
+                </div>
+                <!-- Glass bubbles for Max -->
+                <div
+                    class="absolute top-[20%] left-[10%] w-24 h-24 bg-white/10 blur-xl rounded-full mix-blend-screen animate-pulse">
+                </div>
+                <div
+                    class="absolute bottom-[20%] right-[10%] w-32 h-32 bg-purple-500/10 blur-2xl rounded-full mix-blend-screen animate-pulse delay-700">
+                </div>
+            </div>
+
+            <div class="flex gap-4 mt-10 z-10 animate-fade-up [animation-delay:500ms]">
+                <a href="tech-specs.html"
+                    class="px-8 py-3 bg-white text-black font-bold rounded-full transition-all hover:scale-105 hover:bg-apple-silver">Learn
+                    More</a>
+                <a href="#"
+                    class="px-8 py-3 glass rounded-full text-white font-semibold transition-all hover:bg-white/10">Buy
+                    Now</a>
+            </div>
+        </section>
+
+        <!-- Section 2: AirPods Pro 2 -->
+        <section
+            class="min-h-screen flex flex-col items-center justify-center text-center px-5 pt-16 relative overflow-hidden bg-gradient-to-b from-transparent to-black/50">
+            <div class="mb-10 animate-fade-up z-10">
+                <h1
+                    class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-apple-blue to-white/50">
+                    AirPods Pro</h1>
+                <p class="text-xl md:text-2xl text-apple-slate font-normal max-w-2xl mx-auto">Quiet the noise. Magic in
+                    the ears. 2x more Active Noise Cancellation.</p>
+            </div>
+
+            <div class="relative w-full max-w-3xl [perspective:2000px] my-5 product-container">
+                <div
+                    class="relative w-full [transform-style:preserve-3d] transition-transform duration-300 tilt-wrapper">
+                    <img src="assets/airpods_pro.png" alt="AirPods Pro"
+                        class="w-full max-w-[450px] mx-auto drop-shadow-[0_40px_80px_rgba(0,113,227,0.3)] [transform:translateZ(100px)] pointer-events-none main-img">
+                </div>
+                <!-- Liquid splashes for Pro -->
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(0,113,227,0.1)_0%,transparent_70%)]">
+                </div>
+            </div>
+
+            <div class="flex gap-4 mt-10 z-10 animate-fade-up [animation-delay:500ms]">
+                <a href="#"
+                    class="px-8 py-3 bg-apple-blue text-white font-bold rounded-full transition-all hover:scale-105 hover:brightness-110">Immerse
+                    Now</a>
+                <a href="#"
+                    class="px-8 py-3 glass rounded-full text-white font-semibold transition-all hover:bg-white/10">Buy</a>
+            </div>
+        </section>
+
+        <!-- Features Showcase -->
+        <section class="max-w-7xl mx-auto px-5 py-32 grid md:grid-cols-3 gap-8">
+            <div class="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[30px] hover:bg-white/10 transition-all group animate-fade-up [animation-delay:200ms] cursor-pointer section-popup-trigger"
+                data-title="Pro-level Active Noise Cancellation"
+                data-desc="Up to 2x more Active Noise Cancellation than the previous generation. Transparency mode lets you hear the world around you. High-fidelity audio is combined with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience."
+                data-img="assets/airpods_purple.png">
+                <div
+                    class="w-12 h-12 rounded-full bg-apple-blue/20 flex items-center justify-center mb-6 border border-apple-blue/30 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-apple-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-apple-blue transition-colors">Pro-level
+                    ANC</h3>
+                <p class="text-apple-slate leading-relaxed">Up to 2x more Active Noise Cancellation. Transparency mode
+                    lets you hear the world around you.</p>
+                <div
+                    class="mt-8 text-xs font-bold text-apple-blue uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Learn More →</div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[30px] hover:bg-white/10 transition-all group animate-fade-up [animation-delay:400ms] cursor-pointer section-popup-trigger"
+                data-title="Radical Core Design"
+                data-desc="Everything from the cushion to the canopy has been designed for an uncompromising fit that creates the optimal acoustic seal for many different head shapes — fully immersing you in every sound."
+                data-img="assets/airpods_purple.png">
+                <div
+                    class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mb-6 border border-purple-500/30 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-purple-500 transition-colors">Radical
+                    Design</h3>
+                <p class="text-apple-slate leading-relaxed">Breathable knit mesh canopy and memory foam cushions for a
+                    radically original composition.</p>
+                <div
+                    class="mt-8 text-xs font-bold text-purple-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    Explore Design →</div>
+            </div>
+            <div class="bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[30px] hover:bg-white/10 transition-all group animate-fade-up [animation-delay:600ms] cursor-pointer section-popup-trigger"
+                data-title="USB-C Charging & Power"
+                data-desc="Fast charging with USB-C provides 1.5 hours of listening time with just a 5-minute charge. Up to 20 hours of listening time on a single charge with Pro-level Active Noise Cancellation and Spatial Audio enabled."
+                data-img="assets/airpods_pro.png">
+                <div
+                    class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6 border border-green-500/30 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-green-500 transition-colors">USB-C Power
+                </h3>
+                <p class="text-apple-slate leading-relaxed">Fast charging with USB-C. Up to 20 hours of listening time
+                    on a single charge with ANC.</p>
+                <div
+                    class="mt-8 text-xs font-bold text-green-500 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                    View Power Specs →</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-24 text-center border-t border-white/5 text-apple-slate text-[10px] tracking-widest uppercase">
+        <p>&copy; 2026 Apple Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- Interactive Popup/Modal -->
+    <div id="productPopup"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-5 opacity-0 pointer-events-none transition-all duration-500 backdrop-blur-3xl bg-black/40">
+        <div class="bg-white/5 border border-white/10 p-10 rounded-[40px] max-w-2xl w-full relative scale-90 transition-transform duration-500"
+            id="popupInner">
+            <button id="closePopup" class="absolute top-8 right-8 text-white/50 hover:text-white text-xl">✕</button>
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <img src="assets/airpods_purple.png" id="popupImg" class="w-64 drop-shadow-2xl" alt="AirPods">
+                <div>
+                    <h2 id="popupTitle" class="text-4xl font-bold mb-4">AirPods Max</h2>
+                    <p id="popupDesc" class="text-apple-slate leading-relaxed mb-6">Experience the ultimate personal
+                        listening experience with a radically original composition.</p>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+                            <span>Pro-level Active Noise Cancellation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+                            <span>Personalised Spatial Audio</span>
+                        </div>
+                    </div>
+                    <button class="mt-8 px-10 py-3 bg-apple-blue text-white font-bold rounded-full w-full">Order
+                        Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

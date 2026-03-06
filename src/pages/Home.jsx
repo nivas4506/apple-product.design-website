@@ -149,7 +149,7 @@ const DesignSection = () => {
                     transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <div className="relative rounded-[60px] overflow-hidden border border-white/10 shadow-2xl">
-                        <img src={productImages.design} alt="AirPods Max Design Detail" className="w-full h-full object-cover" />
+                        <img src={productImages.design} alt="AirPods Max Design Detail - Stainless Steel Frame and Mesh" className="w-full h-full object-cover" loading="lazy" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     </div>
                     {/* Floating Accent */}

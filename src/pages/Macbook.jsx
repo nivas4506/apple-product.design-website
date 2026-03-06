@@ -39,7 +39,7 @@ const ProductVisual = ({ image }) => {
                     transition={{ type: 'spring', stiffness: 50, damping: 20 }}
                     style={{ transformStyle: 'preserve-3d' }}
                 >
-                    <img src={image} alt="MacBook Pro" className="w-full drop-shadow-[0_100px_150px_rgba(0,0,0,0.9)] [transform:translateZ(100px)] pointer-events-none" />
+                    <img src={image} alt="MacBook Pro M4 - High Performance Laptop" className="w-full drop-shadow-[0_100px_150px_rgba(0,0,0,0.9)] [transform:translateZ(100px)] pointer-events-none" />
                 </motion.div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] -z-10 bg-[radial-gradient(circle_at_center,rgba(0,113,227,0.1)_0%,transparent_70%)] opacity-30 blur-2xl"></div>
             </div>
@@ -154,7 +154,7 @@ export default function Macbook() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className={`${GLASS_CLASS} rounded-[60px] p-2 aspect-video overflow-hidden`}
                     >
-                        <img src="/src/assets/macbook_pro.png" alt="Display" className="w-full h-full object-cover scale-150 relative -top-20" />
+                        <img src="/src/assets/macbook_pro.png" alt="MacBook Pro Liquid Retina XDR Display Detail" className="w-full h-full object-cover scale-150 relative -top-20" />
                     </motion.div>
                 </div>
             </section>

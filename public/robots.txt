@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://airpods-max-react.vercel.app/sitemap.xml
+Sitemap: https://product-store-3d.onrender.com/sitemap.xml

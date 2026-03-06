@@ -1,9 +1,0 @@
-services:
-  - type: static
-    name: product-store-3d
-    buildCommand: npm run build
-    publishPath: ./dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html

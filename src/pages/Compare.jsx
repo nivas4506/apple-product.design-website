@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import airpodsPro from '../assets/airpods_pro.png';
+import airpodsPurple from '../assets/airpods_purple.png';
 
 const products = [
     {
         name: "AirPods Pro 2",
         price: "From $249",
-        image: "/src/assets/airpods_pro.png",
+        image: airpodsPro,
         features: [
             { label: "2x Active Noise Cancellation", highlighted: true },
             { label: "Adaptive Audio", highlighted: false },
@@ -16,7 +18,7 @@ const products = [
     {
         name: "AirPods Max",
         price: "From $549",
-        image: "/src/assets/airpods_purple.png",
+        image: airpodsPurple,
         featured: true,
         features: [
             { label: "Pro-level Active Noise Cancellation", highlighted: true },

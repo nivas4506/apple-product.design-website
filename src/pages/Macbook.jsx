@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X, Cpu, Zap, Battery, Monitor, HardDrive } from 'lucide-react';
+import macbookPro from '../assets/macbook_pro.png';
+import heroVideo from '../assets/Make_landpage_video_mac_4e186b2a61.mp4';
 
 const GLASS_CLASS = "bg-white/10 backdrop-blur-xl border border-white/20";
 const TEXT_GRADIENT_CLASS = "bg-clip-text text-transparent bg-gradient-to-r from-white via-apple-slate to-white/30";
@@ -75,7 +77,7 @@ export default function Macbook() {
                     preload="auto"
                     className="absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-1000 will-change-transform"
                 >
-                    <source src="/src/assets/Make_landpage_video_mac_4e186b2a61.mp4" type="video/mp4" />
+                    <source src={heroVideo} type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
 
@@ -132,7 +134,7 @@ export default function Macbook() {
             </section>
 
             {/* 3D Showcase */}
-            <ProductVisual image="/src/assets/macbook_pro.png" />
+            <ProductVisual image={macbookPro} />
 
             {/* Feature Showcase */}
             <section className="py-40 border-t border-white/5 bg-[#0a0a0a]">
@@ -154,7 +156,7 @@ export default function Macbook() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className={`${GLASS_CLASS} rounded-[60px] p-2 aspect-video overflow-hidden`}
                     >
-                        <img src="/src/assets/macbook_pro.png" alt="MacBook Pro Liquid Retina XDR Display Detail" className="w-full h-full object-cover scale-150 relative -top-20" />
+                        <img src={macbookPro} alt="MacBook Pro Liquid Retina XDR Display Detail" className="w-full h-full object-cover scale-150 relative -top-20" />
                     </motion.div>
                 </div>
             </section>

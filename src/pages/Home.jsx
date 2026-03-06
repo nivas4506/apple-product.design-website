@@ -1,14 +1,14 @@
-import { useState, useRef, useMemo } from 'react';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
-import { Play, X, Headphones, Shield, Cpu, Zap, Volume2, Bluetooth, Battery, Sparkles } from 'lucide-react';
+import airpodsPurple from '../assets/airpods_purple.png';
+import airpodsPro from '../assets/airpods_pro.png';
+import airpodsDesign from '../assets/airpods_max_design.png';
 
 const GLASS_CLASS = "bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08]";
 const TEXT_GRADIENT_CLASS = "bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/40";
 
 const productImages = {
-    max: "/src/assets/airpods_purple.png",
-    pro: "/src/assets/airpods_pro.png",
-    design: "/src/assets/airpods_max_design.png",
+    max: airpodsPurple,
+    pro: airpodsPro,
+    design: airpodsDesign,
 };
 
 const ScrollProgress = () => {
@@ -208,7 +208,10 @@ export default function Home() {
                             features: ['Magic Pairing', 'Seamless Switching', 'Listen Together']
                         })}
                     >
-                        <div className="absolute inset-0 bg-[url('/src/assets/airpods_purple.png')] bg-center bg-no-repeat opacity-20 scale-150 group-hover:scale-[1.6] transition-transform duration-[4s]" />
+                        <div
+                            className="absolute inset-0 bg-center bg-no-repeat opacity-20 scale-150 group-hover:scale-[1.6] transition-transform duration-[4s]"
+                            style={{ backgroundImage: `url(${airpodsPurple})` }}
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                         <div className="absolute bottom-16 left-16 z-10">
                             <span className="inline-block px-4 py-1 rounded-full bg-apple-blue/20 text-apple-blue text-xs font-bold uppercase tracking-widest mb-6">Innovative</span>

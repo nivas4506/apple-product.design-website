@@ -1,3 +1,7 @@
+import { useState, useRef, useMemo } from 'react';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
+import { Play, X, Headphones, Shield, Cpu, Zap, Volume2, Bluetooth, Battery, Sparkles } from 'lucide-react';
+
 import airpodsPurple from '../assets/airpods_purple.png';
 import airpodsPro from '../assets/airpods_pro.png';
 import airpodsDesign from '../assets/airpods_max_design.png';

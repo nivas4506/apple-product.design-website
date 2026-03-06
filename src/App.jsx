@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
@@ -60,10 +61,50 @@ const MorphingBackground = () => (
     </div>
 );
 
+const SEOUpdater = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        const titleMap = {
+            '/': 'AirPods Max | Product Store',
+            '/macbook': 'MacBook Pro | Product Store',
+            '/tech-specs': 'Tech Specs | Product Store',
+            '/compare': 'Compare Models | Product Store'
+        };
+
+        const descMap = {
+            '/': 'Experience the symphonic sound of AirPods Max. High-fidelity audio with active noise cancellation.',
+            '/macbook': 'MacBook Pro with M4. A monster for any task with up to 24 hours of battery life.',
+            '/tech-specs': 'Detailed breakdown of the most advanced Apple audio gear specs.',
+            '/compare': 'Compare AirPods models to find the perfect one for your listening experience.'
+        };
+
+        const currentPath = location.pathname;
+        const newTitle = titleMap[currentPath] || 'Product Store';
+        const newDesc = descMap[currentPath] || 'Explore our curated collection of premium Apple products.';
+
+        document.title = newTitle;
+
+        const descMeta = document.querySelector('meta[name="description"]');
+        if (descMeta) {
+            descMeta.setAttribute('content', newDesc);
+        }
+
+        const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+        if (ogTitleMeta) {
+            ogTitleMeta.setAttribute('content', newTitle);
+        }
+
+    }, [location]);
+
+    return null;
+};
+
 export default function App() {
     return (
         <Router>
             <div className="relative min-h-screen bg-black overflow-x-hidden">
+                <SEOUpdater />
                 <Navbar />
                 <MorphingBackground />
 
